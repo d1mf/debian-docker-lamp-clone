@@ -108,7 +108,7 @@ COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 COPY conf/apache.conf /etc/supervisor/conf.d/apache.conf
 COPY conf/mariadb.conf /etc/supervisor/conf.d/mariadb.conf
 COPY conf/ssh.conf /etc/supervisor/conf.d/ssh.conf
-COPY conf/vhosts.conf /home/vhosts.conf
+COPY conf/vhosts.conf /etc/vhosts.conf
 
 # Install NodeJS/npm, composer, Less
 ENV NODEJS_VERSION 14

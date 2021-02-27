@@ -141,8 +141,8 @@ RUN chown -R www-data:www-data /usr/share/adminer
 RUN chown -R www-data:www-data /usr/share/phpinfo
 RUN chown -R www-data:www-data /usr/share/apache2-defaultpage
 
-COPY vhosts.conf /etc/apache2/sites-avalible
-RUN ln -s /etc/apache2/sites-avalible/vhosts.conf /etc/apache2/sites-enabled/vhosts.conf
+COPY vhosts.conf /etc/apache2/sites-available
+RUN ln -s /etc/apache2/sites-available/vhosts.conf /etc/apache2/sites-enabled/vhosts.conf
 
 RUN apt-get clean
 # file cleaning

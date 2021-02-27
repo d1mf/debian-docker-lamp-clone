@@ -107,7 +107,7 @@ RUN apt-get install -y supervisor
 COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 COPY conf/apache.conf /etc/supervisor/conf.d/apache.conf
 COPY conf/mariadb.conf /etc/supervisor/conf.d/mariadb.conf
-COPY conf/ssh.conf /etc/supervisor/conf.d/ssh.conf
+COPY conf/ssh.conf /etc/apache2/sites-enabled/ssh.conf
 
 
 # Install NodeJS/npm, composer, Less

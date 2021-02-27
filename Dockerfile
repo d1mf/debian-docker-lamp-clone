@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 
 MAINTAINER myke94
-
+RUN mkdir /opt/html
 COPY sed/php_replace.sed /
 COPY sed/replace_opcache.sed /
 COPY conf/xdebug.ini /

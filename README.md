@@ -1,3 +1,5 @@
+docker run -d  -p 80:80 -p 443:443 -v  /opt/html:/var/www/html  -t myke94/debian-docker-lamp:latest
+
 # Debian Docker LAMP
 A Debian buster slim Docker LAMP. Everything is in one container.
 

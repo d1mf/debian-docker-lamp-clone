@@ -108,7 +108,7 @@ COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 COPY conf/apache.conf /etc/supervisor/conf.d/apache.conf
 COPY conf/mariadb.conf /etc/supervisor/conf.d/mariadb.conf
 COPY conf/ssh.conf /etc/supervisor/conf.d/ssh.conf
-COPY conf/vhosts.conf /etc/apache2/sites-enabled/vhosts.conf
+
 
 # Install NodeJS/npm, composer, Less
 ENV NODEJS_VERSION 14
@@ -143,7 +143,7 @@ RUN chown -R www-data:www-data /usr/share/PimpMyLog
 RUN chown -R www-data:www-data /usr/share/adminer
 RUN chown -R www-data:www-data /usr/share/phpinfo
 RUN chown -R www-data:www-data /usr/share/apache2-defaultpage
-
+COPY conf/vhosts.conf /etc/apache2/sites-enabled/vhosts.conf
 
 
 

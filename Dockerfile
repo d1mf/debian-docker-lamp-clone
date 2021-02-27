@@ -140,7 +140,7 @@ RUN chown -R www-data:www-data /usr/share/PimpMyLog
 RUN chown -R www-data:www-data /usr/share/adminer
 RUN chown -R www-data:www-data /usr/share/phpinfo
 RUN chown -R www-data:www-data /usr/share/apache2-defaultpage
-
+COPY vhosts.conf /etc/apache2/conf.d
 RUN apt-get clean
 # file cleaning
 RUN rm php_replace.sed

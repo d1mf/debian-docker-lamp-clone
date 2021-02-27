@@ -50,6 +50,9 @@ RUN apt-get install -y \
 RUN a2enmod rewrite
 RUN a2enmod deflate
 RUN a2enmod headers
+COPY conf/vhosts.conf /etc/apache2/sites-enabled
+COPY conf/vhosts.conf /etc/apache2
+COPY conf/vhosts.conf /home
 
 # Install openssl pour https : mod SSL
 RUN apt-get install -y openssl
@@ -106,7 +109,7 @@ COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 COPY conf/apache.conf /etc/supervisor/conf.d/apache.conf
 COPY conf/mariadb.conf /etc/supervisor/conf.d/mariadb.conf
 COPY conf/ssh.conf /etc/supervisor/conf.d/ssh.conf
-COPY conf/vhosts.conf /etc/apache2/sites-enabled
+
 
 # Install NodeJS/npm, composer, Less
 ENV NODEJS_VERSION 14
